@@ -1,0 +1,5 @@
+# Sensitive data
+const.py
+
+# cache
+__pycache__/
