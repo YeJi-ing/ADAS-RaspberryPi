@@ -10,4 +10,3 @@ import adafruit_amg88xx
 from datetime import datetime
 from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
 import const
-import utils

@@ -29,10 +29,11 @@ def execute_thermal_imgsave():
     # 파일 이름 생성 (현재 시간과 THING_NAME 포함)
     timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
     file_name = f"{timestamp}_{const.THING_NAME}.jpg"
-    os.remove("pic.jpg", file_name)
+    os.rename("pic.jpg", file_name)
 
     # S3에 업로드
     upload_to_s3(file_name, const.BUCKET_NAME, file_name)
+    os.remove(file_name)
 
     return file_name
 
