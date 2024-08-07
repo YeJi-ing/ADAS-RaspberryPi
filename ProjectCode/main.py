@@ -94,3 +94,7 @@ if __name__ == "__main__":
     # 메시지 수신을 계속해서 처리하기 위해 대기
     while True:
         time.sleep(1)
+
+    # 연결 종료
+    mqtt_client.disconnect()
+    print('Disconnected from AWS IoT Core')
